@@ -14,8 +14,8 @@ interface Props {
 }
 
 const {
-  title = `${site.name} · ${site.descriptor} en ${site.address.area}, ${site.address.city}`,
-  description = `${site.descriptor} en ${site.address.area} (${site.address.city}) con varios residentes: realismo en negro y gris, color, línea fina y diseños a medida. Pide tu cita por ${primaryContact.channel}.`,
+  title = `Narnia Gallery Tattoo · Estudio de tatuajes y galería de arte en ${site.address.city}`,
+  description = `Narnia Gallery Tattoo: estudio de tatuajes y galería de arte en ${site.address.street}, ${site.address.city}. Retratos, animales, naturaleza, lettering y línea fina. Pide tu cita por ${primaryContact.channel}.`,
   mobileBar = true,
   noindex = false,
 } = Astro.props;
@@ -26,7 +26,7 @@ const ogImage = new URL('/og.png', site.url).href;
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TattooParlor',
-  name: site.name,
+  name: 'Narnia Gallery Tattoo',
   url: site.url,
   image: ogImage,
   sameAs: [site.instagram.url],

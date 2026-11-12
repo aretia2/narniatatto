@@ -13,12 +13,12 @@ const hasLogo = existsSync(logoPath);
 const og = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
   <rect width="1200" height="630" fill="#0e0d0c"/>
   <line x1="70" y1="110" x2="${hasLogo ? 660 : 1130}" y2="110" stroke="#ece6da" stroke-opacity=".2"/>
-  <text x="70" y="92" fill="#b5865a" font-family="Arial Narrow, Arial, sans-serif" font-size="22" letter-spacing="4" font-weight="700">${esc(
+  <text x="70" y="92" fill="#8fb3e0" font-family="Arial Narrow, Arial, sans-serif" font-size="22" letter-spacing="4" font-weight="700">${esc(
     `${site.descriptor} · ${site.address.area}, ${site.address.city}`.toUpperCase(),
   )}</text>
   <text x="64" y="300" fill="#ece6da" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="104">${esc(site.name)}</text>
   <text x="70" y="390" fill="#ece6da" font-family="Arial Narrow, Arial, sans-serif" font-weight="800" font-size="40">${esc(line1.toUpperCase())}</text>
-  <text x="70" y="440" fill="#e2603f" font-family="Arial Narrow, Arial, sans-serif" font-weight="800" font-size="40">${esc(line2.toUpperCase())}</text>
+  <text x="70" y="440" fill="#e3a83b" font-family="Arial Narrow, Arial, sans-serif" font-weight="800" font-size="40">${esc(line2.toUpperCase())}</text>
   <text x="70" y="545" fill="#b9b1a4" font-family="Arial, sans-serif" font-size="24">${esc(`${site.descriptor} · @${site.instagram.handle}`)}</text>
 </svg>`;
 

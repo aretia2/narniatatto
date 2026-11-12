@@ -19,14 +19,14 @@ const big = rest.length ? rest.join(' ') : first;
     <h1 class="masthead display" id="hero-title">
       {small && <><span class="small">{small}</span>{" "}</>}
       <span class="big">{big}</span>
-      <span class="visually-hidden">, {site.descriptor.toLowerCase()} en {site.address.area}, {site.address.city}</span>
+      <span class="visually-hidden"> Gallery Tattoo, estudio de tatuajes y galería de arte en {site.address.city}</span>
     </h1>
 
     <div class="copy">
       <p class="tagline shout">{site.tagline.map((line, i) => <>{i > 0 && <br />}{line}</>)}</p>
       <p class="sub">
-        Estudio de tatuaje en {site.address.area} con un equipo de residentes: realismo en negro y gris,
-        color, línea fina y diseños pensados para ti.
+        Un espacio en {site.address.area}, {site.address.city}, donde se tatúa y se expone arte. Fundado por
+        Danielo: retratos, animales, naturaleza, lettering y piezas finas, con artistas invitados durante el año.
       </p>
       <div class="actions">
         <a class="btn btn--primary" href={primaryContact.href} target="_blank" rel="noopener">

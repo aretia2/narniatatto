@@ -15,8 +15,10 @@ export type Artist = {
 };
 
 export const artists: Artist[] = [
-  { name: 'Artista Uno', instagram: null, styles: ['Realismo', 'Negro y gris'] },
-  { name: 'Artista Dos', instagram: null, styles: ['Tradicional', 'Color'] },
-  { name: 'Artista Tres', instagram: null, styles: ['Línea fina', 'Lettering'] },
-  { name: 'Artista Cuatro', instagram: null, styles: ['Ilustración'], tag: 'Guest' },
+  {
+    name: 'Danielo',
+    instagram: 'danielo.tatu',
+    styles: ['Fem', 'Animal', 'Nature', 'Lettering', 'Wavy'],
+    tag: 'Fundador',
+  },
 ];

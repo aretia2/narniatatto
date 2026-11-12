@@ -4,18 +4,18 @@
  * Los valores `null` se consideran pendientes: los bloques que dependen de ellos no se muestran.
  */
 
-const instagramHandle = 'tuestudio';
+const instagramHandle = 'narnia.gallerytatto';
 
 export const site = {
   /**
    * Nombre del estudio. En la portada, la primera palabra se muestra pequeña y el resto grande
    * (p. ej. «Estudio Nombre»). Si es una sola palabra, se muestra entera en grande.
    */
-  name: 'Estudio Nombre',
+  name: 'Narnia',
   /** Descriptor corto que acompaña al nombre (cabecera del hero, pie, menú). */
-  descriptor: 'Estudio de tatuaje',
+  descriptor: 'Gallery · Tattoo',
   /** Lema del hero, una línea por elemento. */
-  tagline: ['Tu frase de marca', 'va justo aquí.'],
+  tagline: ['Estudio de tatuajes', 'y galería de arte.'],
   /** Dominio definitivo (sin barra final). Mantener sincronizado con astro.config.mjs y public/robots.txt. */
   url: 'https://example.com',
 
@@ -29,13 +29,13 @@ export const site = {
   /** Número en formato internacional sin "+" ni espacios, p. ej. '34600000000'. */
   whatsapp: null as string | null,
   /** Teléfono para enlaces tel:, p. ej. '+34 600 00 00 00'. */
-  phone: null as string | null,
+  phone: '633 19 47 23' as string | null,
 
   address: {
-    street: 'Calle Ejemplo 1',
-    area: 'Barrio',
-    city: 'Ciudad',
-    postalCode: null as string | null,
+    street: 'Calle Polvero, 20',
+    area: 'Las Candelarias',
+    city: 'Sevilla',
+    postalCode: '41006' as string | null,
     country: 'ES',
   },
 
@@ -51,10 +51,10 @@ export const site = {
 };
 
 export const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  `${site.address.street}, ${site.address.area}, ${site.address.city}`,
+  `Narnia Gallery Tattoo, ${site.address.street}, ${site.address.postalCode ?? ''} ${site.address.city}`,
 )}`;
 
-export const phoneHref = site.phone ? `tel:${site.phone.replace(/\s+/g, '')}` : null;
+export const phoneHref = site.phone ? `tel:+34${site.phone.replace(/\s+/g, '')}` : null;
 
 export function whatsappUrl(text?: string) {
   if (!site.whatsapp) return null;
@@ -68,7 +68,7 @@ export const primaryContact = site.whatsapp
 
 export const nav = [
   { href: '/#trabajos', label: 'Trabajos' },
-  { href: '/#residentes', label: 'Residentes' },
+  { href: '/#residentes', label: 'Artistas' },
   { href: '/#estudio', label: 'Estudio' },
   { href: '/#contacto', label: 'Contacto' },
 ];
